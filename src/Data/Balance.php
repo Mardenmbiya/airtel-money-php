@@ -4,11 +4,13 @@ declare(strict_types=1);
 
 namespace Devscast\AirtelMoney\Data;
 
-use Webmozart\Assert\Assert;
-
-class Balance 
+/**
+ * Class Balance
+ * @package Devscast\AirtelMoney\Data
+ * @author bernard-ng <ngandubernard@gmail.com>
+ */
+class Balance
 {
-
     /**
      * balance
      */
@@ -24,29 +26,40 @@ class Balance
      */
     private string $account_status;
 
-    public function __construct(float $balance, string $currency, string $account_status)
+    /**
+     * Balance constructor.
+     * @param array $data
+     * @author bernard-ng <ngandubernard@gmail.com>
+     */
+    public function __construct(array $data)
     {
-
-        Assert::float($balance);
-        Assert::stringNotEmpty($currency);
-        Assert::stringNotEmpty($account_status);
-
-        $this->balance = $balance;
-        $this->currency = $currency;
-        $this->account_status = $account_status;
+        $this->balance = $data['balance'];
+        $this->currency = $data['currency'];
+        $this->account_status = $data['account_status'];
     }
 
-
+    /**
+     * @return string
+     * @author bernard-ng <ngandubernard@gmail.com>
+     */
     public function getAccountStatus(): string
     {
         return $this->account_status;
     }
 
+    /**
+     * @return string
+     * @author bernard-ng <ngandubernard@gmail.com>
+     */
     public function getCurrency(): string
     {
         return $this->currency;
     }
 
+    /**
+     * @return float
+     * @author bernard-ng <ngandubernard@gmail.com>
+     */
     public function getBalance(): float
     {
         return $this->balance;

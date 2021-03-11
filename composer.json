@@ -11,9 +11,13 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "symfony/http-client": "^5.1"
+        "symfony/http-client": "^5.1",
+        "webmozart/assert": "^1.9"
     },
     "autoload": {
         "Devscast\\AirtelMoney\\": "src/"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5"
     }
 }
