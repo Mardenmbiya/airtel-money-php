@@ -241,18 +241,18 @@ class Client
         try {
             $url = $this->url("/standard/v1/payments/refund");
             $response = $this->client->request("POST", $url, [
-               'body' => [
-                   'transaction' => [
-                       'airtel_money_id' => $airtel_money_id
-                   ]
-               ]
+                'body' => [
+                    'transaction' => [
+                        'airtel_money_id' => $airtel_money_id
+                    ]
+                ]
             ]);
 
             if ($response->getStatusCode() === 200) {
                 $data = $response->toArray();
                 return [
-                   'transaction' => new UssdPaymentTransaction($data['data']['transaction']),
-                   'status' => new HttpResponseStatus($data['status'])
+                    'transaction' => new UssdPaymentTransaction($data['data']['transaction']),
+                    'status' => new HttpResponseStatus($data['status'])
                 ];
             }
         } catch (

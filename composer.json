@@ -2,6 +2,8 @@
     "name": "devscast/airtel-money",
     "description": "Airtel Money Africa PHP SDK (unofficial)",
     "type": "library",
+    "keywords": ["payment","airtel money", "mobile money", "africa money", "airtel"],
+    "homepage": "https://github.com/devscast/airtel-money-php",
     "license": "MIT",
     "authors": [
         {
@@ -14,6 +16,12 @@
         "symfony/http-client": "^5.1",
         "webmozart/assert": "^1.9"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/devscast/airtel-money"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Devscast\\AirtelMoney\\": "src/"
