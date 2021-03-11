@@ -26,7 +26,7 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
  * @package Devscast\AirtelMoney
  * @author bernard-ng <ngandubernard@gmail.com>
  */
-abstract class Client
+class Client
 {
     protected Configuration $configuration;
     protected Credentials $credentials;
