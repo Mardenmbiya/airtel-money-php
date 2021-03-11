@@ -160,4 +160,24 @@ class Configuration
         $this->environment = $environment;
         return $this;
     }
+
+    /**
+     * @return string
+     * @author bernard-ng <ngandubernard@gmail.com>
+     */
+    public function getGrantType(): string
+    {
+        return $this->grant_type;
+    }
+
+    /**
+     * @param string $grant_type
+     * @return Configuration
+     * @author bernard-ng <ngandubernard@gmail.com>
+     */
+    public function setGrantType(string $grant_type): self
+    {
+        $this->grant_type = $grant_type;
+        return $this;
+    }
 }

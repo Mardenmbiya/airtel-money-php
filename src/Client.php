@@ -154,7 +154,7 @@ abstract class Client
      * @throws HttpException
      * @author bernard-ng <ngandubernard@gmail.com>
      */
-    public function capture(Payment $payment): array
+    public function capture(Payment $payment): ?array
     {
         $url = $this->url('/merchant/v1/payments/');
         $transaction = $payment->getTransaction();
@@ -204,7 +204,7 @@ abstract class Client
      * @return array
      * @throws HttpException
      */
-    public function transaction(string $id): array
+    public function transaction(string $id): ?array
     {
         try {
             $url = $this->url("/standard/v1/payments/{$id}");
