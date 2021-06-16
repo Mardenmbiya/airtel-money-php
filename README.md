@@ -1,4 +1,4 @@
-# Airtel Money PHP SDK
+# [work in progress] Airtel Money PHP SDK
 
 ### Start Building with Airtel Africa
 Airtel Africa provides a secure way to accept money from the customers.
