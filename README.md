@@ -11,6 +11,8 @@ Account credentials are available in your dashboard for both staging and product
 ### Remember
 Never share your application key or secret with other developers or anyone at Airtel Africa as this will compromise the security of your application.
 
+### Documentation
+[Airtel Money Api documentation](https://developers.airtel.africa/documentation)
 
 ## Installation
 ```bash
